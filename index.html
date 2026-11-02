@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f5ef">
+<title>곱셈구구 놀이터</title>
+<style>
+:root{--ink:#343d50;--muted:#626c7c;--paper:#fff;--bg:#f8f5ef;--mint:#d9eee3;--green:#2f6853;--pink:#f9dce5;--lav:#e8e0f6;--sky:#dfedf9;--yellow:#fae9b8;--peach:#f9dfce;--line:#e9e7e3;--shadow:0 7px 0 #343d5008,0 12px 32px #343d5005}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 8% 0%,#eaf2e8 0,transparent 37%),radial-gradient(ellipse at 95% 10%,#f8e7e9 0,transparent 32%),var(--bg);font-family:"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;font-size:18px;line-height:1.6;min-height:100vh;word-break:keep-all}button,select{font:inherit;color:inherit}button{cursor:pointer;border:0;touch-action:manipulation}button:disabled{cursor:default;opacity:.55}button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #65589a;outline-offset:4px}button:not(:disabled):active{transform:translateY(2px)}button{transition:transform .12s,background .12s}h1,h2,h3,p{margin:0}h1,h2,h3{letter-spacing:-.045em;line-height:1.3}h1{font-size:clamp(30px,4.5vw,44px);font-weight:850}h2{font-size:25px}h3{font-size:21px}[hidden]{display:none!important}.app{max-width:940px;padding:30px 24px 24px;margin:auto}.brandbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:32px}.brand{font-size:18px;font-weight:800;display:flex;align-items:center;gap:9px}.brand-icon{background:var(--mint);height:38px;width:38px;display:grid;place-items:center;border-radius:14px;font-size:27px;line-height:1}.grade{font-size:13px;color:var(--muted);background:#ffffffa8;border:1px solid #fff;border-radius:20px;padding:5px 13px;white-space:nowrap}.screen{animation:appear .18s ease-out}.screen:not(.active){display:none}@keyframes appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:750;color:var(--green);letter-spacing:.02em;margin-bottom:10px}.dot{width:7px;height:7px;border-radius:50%;background:#6a9b7e}.hero{margin-bottom:28px;position:relative}.hero p{color:var(--muted);font-size:18px;margin-top:10px}.hero .spark{position:absolute;right:12px;top:0;font-size:58px;transform:rotate(13deg);color:#a792cf;line-height:1;user-select:none}.home-layout{display:grid;grid-template-columns:1.14fr 1fr;gap:22px;align-items:start}.card{background:#fff;border:1px solid #ffffffcc;border-radius:28px;padding:26px;box-shadow:var(--shadow)}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}.tag{font-size:12px;padding:4px 9px;border-radius:20px;background:#f3f5f4;color:var(--muted);white-space:nowrap}.dan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.dan-btn{background:var(--tone);border-radius:20px;min-height:91px;font-size:28px;font-weight:800;box-shadow:inset 0 -4px 0 #343d5006}.dan-btn small{display:block;font-size:12px;font-weight:500;line-height:1.2;margin-top:3px;color:#535f69}.quiet{font-size:14px;color:var(--muted)}.practice-note{margin-top:18px}.mode-stack{display:flex;flex-direction:column;gap:15px}.mode-button{border-radius:25px;padding:21px;text-align:left;display:flex;gap:16px;align-items:center;min-height:123px;width:100%;box-shadow:inset 0 -4px 0 #343d5005}.mode-button .icon{background:#ffffff80;border:1px solid #ffffff8a;border-radius:19px;width:57px;height:57px;display:grid;place-items:center;font-size:29px;flex-shrink:0}.mode-button strong{font-size:23px;display:block;letter-spacing:-.04em}.mode-button small{display:block;font-size:14px;margin-top:3px;color:#525967}.mode-button .arrow{margin-left:auto;font-size:22px}.random{background:var(--lav)}.real{background:var(--peach)}.board-link{background:var(--yellow);width:100%;border-radius:20px;padding:16px;font-size:19px;font-weight:750;display:flex;justify-content:space-between;align-items:center}.personal-best{font-size:14px;display:flex;justify-content:space-between;align-items:center;padding:0 7px;color:var(--muted)}.personal-best b{font-size:18px;color:var(--ink)}.footer{margin:28px 0 0;text-align:center;color:var(--muted);font-size:13px}.footer .divider{margin:0 6px;color:#a4a9af}.support{margin:20px auto 0;max-width:700px;font-size:14px;color:var(--muted)}.support>summary{cursor:pointer;text-align:center;list-style:none;text-decoration:underline;text-underline-offset:4px;padding:8px}.support-body{margin-top:10px;border:1px solid var(--line);background:#ffffffa0;padding:20px;border-radius:20px;overflow-wrap:anywhere}.support-body p+ p{margin-top:12px}.support-body details{margin-top:14px}.support-body summary{cursor:pointer;font-weight:700}.support-body pre{font:12px/1.65 ui-monospace,monospace;background:#f1f2f5;padding:14px;border-radius:14px;white-space:pre-wrap;max-height:280px;overflow:auto;color:#414858}.support-body a{color:var(--green)}.btn{min-height:54px;border-radius:18px;padding:12px 21px;background:var(--mint);font-weight:750;font-size:19px}.btn.secondary{background:var(--lav)}.btn.light{background:#eef0f3}.btn.outline{background:#fff;border:1px solid #dcdfe4}.btn.small{min-height:44px;font-size:15px;padding:10px 15px;border-radius:15px}.btn.full{width:100%}.row{display:flex;gap:12px}.row>*{flex:1}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}.mode-pill{font-size:15px;font-weight:700;background:var(--lav);border-radius:20px;padding:6px 14px}.live-score{color:var(--muted);font-size:16px}.live-score b{color:var(--green);font-size:22px}.game-container{max-width:600px;margin:auto}.clock-card{display:flex;gap:15px;align-items:center;margin-bottom:17px;background:#ffffffbd;border:1px solid #fff;padding:13px 18px;border-radius:20px}.track{height:12px;flex:1;background:#e6e8e6;border-radius:20px;overflow:hidden}.fill{height:100%;background:#79a992;border-radius:20px;width:100%}.clock-number{font-size:25px;font-weight:800;min-width:75px;text-align:right;font-variant-numeric:tabular-nums}.clock-card.danger .fill{background:#d98283}.clock-card.danger .clock-number{color:#a8434b}.question-card{text-align:center;padding:25px 20px 20px}.question-label{font-size:14px;color:var(--muted);font-weight:600;margin-bottom:10px}.question{font-size:clamp(46px,9vw,64px);line-height:1.35;font-weight:850;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;gap:16px}.question .op{color:#b26983;font-size:.8em}.answer{min-height:76px;min-width:143px;display:table;margin:13px auto 0;background:#fbefcd;border:2px solid #f6e2a5;border-radius:22px;font-size:43px;line-height:1.6;font-weight:800;padding:0 20px;font-variant-numeric:tabular-nums}.answer.empty{color:#9b947e}.answer.right{background:var(--mint);border-color:#b4d6c4}.answer.wrong{background:var(--pink);border-color:#edbdcc}.feedback{min-height:36px;font-size:19px;font-weight:650;line-height:1.5;margin-top:12px;color:var(--muted)}.feedback.good{color:#286448}.feedback.bad{color:#9a4059}.keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:18px}.key{background:#fff;border:1px solid #e8e7e6;border-radius:20px;font-size:29px;font-weight:750;min-height:65px;box-shadow:0 4px 0 #dcdedb88}.key.delete{font-size:17px;background:var(--sky);border-color:transparent}.key.enter{font-size:21px;background:var(--mint);border-color:transparent}.keyboard-note{font-size:13px;color:var(--muted);text-align:center;margin-top:15px}.ready{text-align:center;padding:32px 24px}.ready .ready-icon{font-size:55px;line-height:1.3;margin-bottom:10px}.ready h1{font-size:30px}.ready p{color:var(--muted);font-size:17px;margin:14px 0 24px}.ready .btn{padding:15px 42px;font-size:23px}.ready small{display:block;color:var(--muted);font-size:13px;margin-top:15px}.result-container,.board-container{max-width:660px;margin:auto}.result-card{text-align:center}.result-icon{font-size:50px;line-height:1.3;margin-bottom:13px}.result-card h1{font-size:31px}.result-sub{font-size:16px;margin:10px 0 22px;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{border-radius:20px;background:var(--mint);padding:16px 3px}.stat:nth-child(2){background:var(--sky)}.stat:nth-child(3){background:var(--yellow)}.stat b{display:block;font-size:32px;line-height:1.35}.stat span{font-size:13px;color:#515e68}.new-record{font-size:16px;color:#975d30;font-weight:700;margin-top:17px}.wrong-area{margin-top:25px;padding-top:20px;border-top:1px dashed #dfdfe4}.wrong-area h2{font-size:19px}.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 16px;max-height:210px;overflow:auto}.chip{font-size:17px;padding:7px 12px;border-radius:14px;background:#f9eaf0;white-space:nowrap}.result-actions{margin-top:20px}.register-panel{margin-top:19px}.register-panel h2{font-size:23px}.register-panel p{font-size:14px;color:var(--muted);margin:8px 0 14px}.select-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:15px}.select-row label{font-size:13px;color:var(--muted)}select{width:100%;background:#f7f6fc;border:1px solid #dfd9ed;border-radius:15px;padding:12px 9px;font-size:19px;margin-top:4px;min-height:54px}.status{font-size:15px;color:var(--muted);margin-top:12px;min-height:24px;overflow-wrap:anywhere}.status.error{color:#9c3e51}.board-heading{text-align:center;margin:12px 0 26px}.board-heading h1{font-size:32px}.board-heading p{font-size:16px;color:var(--muted);margin-top:8px}.board-meta{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:13px;margin-bottom:12px}.live-badge{background:var(--mint);color:var(--green);border-radius:20px;padding:3px 10px;font-size:12px;font-weight:700}.leader-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}.leader-item{background:#fff;border:1px solid #eee;border-radius:20px;padding:14px 19px;display:flex;align-items:center;gap:12px}.leader-item.me{background:#fcf0c9;border-color:#e9d58c}.rank{font-size:20px;font-weight:800;min-width:36px;text-align:center}.nickname{flex:1;font-size:19px;font-weight:650;overflow-wrap:anywhere}.points{font-size:23px;font-weight:800;color:var(--green);white-space:nowrap}.points small{font-size:13px;font-weight:500}.my-badge{display:block;font-size:12px;font-weight:500;color:#80652d}.empty-state{text-align:center;padding:33px 20px;color:var(--muted);background:#ffffffa0;border:1px dashed #d6d4db;border-radius:23px;font-size:17px}.empty-state .big-icon{display:block;font-size:39px;margin-bottom:8px}.board-actions{margin-top:20px}.board-tip{font-size:13px;color:var(--muted);text-align:center;margin-top:17px}dialog{border:0;border-radius:26px;padding:27px;color:var(--ink);max-width:min(420px,calc(100% - 32px));box-shadow:0 25px 80px #343d5030}dialog::backdrop{background:#343d5066}dialog h2{font-size:24px}dialog p{font-size:16px;color:var(--muted);margin:12px 0 23px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:700px){.app{padding:21px 18px}.brandbar{margin-bottom:25px}.brand{font-size:16px}.grade{font-size:11px;padding:4px 10px}.hero{margin-bottom:22px}.hero p{font-size:16px;max-width:85%}.hero .spark{font-size:39px;right:0;top:5px}.home-layout{grid-template-columns:1fr;gap:18px}.card{padding:21px;border-radius:25px}.mode-stack{gap:13px}.mode-button{min-height:105px;padding:18px}.dan-btn{min-height:82px;font-size:27px}.sectionhead{margin-bottom:15px}.topbar{gap:8px;margin-bottom:14px}.topbar .btn.small{font-size:14px;padding:9px 11px}.mode-pill{font-size:13px;padding:5px 10px}.live-score{font-size:13px}.live-score b{font-size:19px}.question{gap:12px}.question-card{padding:22px 15px 15px}.key{min-height:60px}.keypad{gap:10px}.brandbar:has(+main #play.active){margin-bottom:18px}.result-card h1{font-size:26px}.stats{gap:8px}.stat b{font-size:29px}.stat span{font-size:12px}.row .btn{font-size:16px;padding:12px 10px}.board-heading h1{font-size:28px}.leader-item{padding:13px 12px;gap:9px}.nickname{font-size:17px}.points{font-size:21px}}@media(max-width:350px){.app{padding:17px 12px}h1{font-size:28px}.brand{font-size:14px}.brand-icon{width:31px;height:31px}.grade{font-size:10px}.dan-grid{gap:8px}.card{padding:17px}.topbar{gap:6px}.question{font-size:46px;gap:10px}.select-row{gap:8px}select{font-size:17px}.row{gap:8px}.key{min-height:55px}.stat b{font-size:25px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.svg-icon{width:1.3em;height:1.3em;vertical-align:-.26em;flex-shrink:0}.icon .svg-icon{width:36px;height:36px}.ready-icon .svg-icon,.result-icon .svg-icon{width:64px;height:64px}.spark .svg-icon{width:57px;height:57px}.big-icon .svg-icon{width:48px;height:48px}.question:focus,#homeTitle:focus,#resultTitle:focus,#boardTitle:focus{outline:none}.rank.podium{width:36px;height:36px;line-height:36px;border-radius:50%;background:#f6e5b6;color:#866c37}.rank.podium-2{background:#e5e8ee;color:#657080}.rank.podium-3{background:#f1dfd1;color:#8f6652}@media(max-width:350px){.sectionhead h2{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="brandbar"><div class="brand"><span class="brand-icon" aria-hidden="true">×</span>구구 놀이터</div><span class="grade">초등 3학년 · 수학</span></header>
+<main>
+<section id="home" class="screen active" aria-labelledby="homeTitle">
+  <div class="hero"><div class="eyebrow"><span class="dot"></span>매일 조금씩, 자신감은 쑥쑥!</div><h1 id="homeTitle" tabindex="-1">곱셈구구 놀이터</h1><p>좋아하는 단부터, 즐겁게 연습해 볼까요?</p><span class="spark" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 4 4.8 9.8 10.8 1.6-7.8 7.6 1.8 10.8-9.6-5.1-9.6 5.1 1.8-10.8-7.8-7.6 10.8-1.6Z" fill="#f3d881" stroke="#b6a06b"/><path d="M16 20h.1m7.8 0h.1" stroke="#766344" stroke-width="3"/><path d="M17 24q3 3 6 0" stroke="#766344"/></svg></span></div>
+  <div class="home-layout">
+    <div class="card"><div class="sectionhead"><h2>어떤 단을 풀까요?</h2><span class="tag">시간 제한 없어요</span></div><div class="dan-grid" id="danGrid"></div><p class="quiet practice-note"><svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 34V21" stroke="#6b927c"/><path d="M20 27C8 28 5 19 7 14c9 0 14 5 13 13Z" fill="#b9d5bd" stroke="#6b927c"/><path d="M20 23c-1-12 8-17 14-15 1 9-5 16-14 15Z" fill="#d8e9cd" stroke="#6b927c"/></svg> 1부터 9까지 골고루, 순서를 섞어서 나와요.</p></div>
+    <div class="mode-stack">
+      <button class="mode-button random" id="randomBtn"><span class="icon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="28" height="28" rx="8" fill="#f9f5ff"/><g fill="#8b71b6" stroke="none"><circle cx="13" cy="13" r="2.2"/><circle cx="27" cy="13" r="2.2"/><circle cx="20" cy="20" r="2.2"/><circle cx="13" cy="27" r="2.2"/><circle cx="27" cy="27" r="2.2"/></g></svg></span><span><strong>랜덤 연습</strong><small>2~9단을 골고루 섞어서!</small></span><span class="arrow" aria-hidden="true">↗</span></button>
+      <button class="mode-button real" id="realBtn"><span class="icon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="15" y="3" width="10" height="4" rx="2" fill="#d8b18c" stroke="none"/><path d="M20 7v4M30 10l3-3"/><circle cx="20" cy="23" r="13" fill="#fff9f0"/><path d="M20 15v9l5 3" stroke="#bc7a5c" stroke-width="3"/></svg></span><span><strong>60초 실전모드</strong><small>시간 안에 얼마나 맞힐 수 있을까요?</small></span><span class="arrow" aria-hidden="true">↗</span></button>
+      <button class="board-link" id="lbBtn"><span><svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8H6v6c0 6 5 8 9 8m13-14h6v6c0 6-5 8-9 8"/><path d="M11 5h18v11c0 7-4 11-9 11s-9-4-9-11Z" fill="#f4d580"/><path d="M20 27v7m-7 2h14"/></svg> 실전모드 순위표</span><span aria-hidden="true">→</span></button>
+      <p class="personal-best"><span>이 브라우저의 실전 최고 기록</span><b id="bestText">0문제</b></p>
+    </div>
+  </div>
+</section>
+<section id="play" class="screen" aria-label="곱셈구구 문제 풀기">
+ <div class="game-container">
+  <div class="topbar"><button class="btn small light" id="quitBtn">← 연습 마치기</button><span class="mode-pill" id="modeLabel">2단 연습</span><span class="live-score">맞힘 <b id="correctText">0</b> / <span id="totalText">0</span></span></div>
+  <div class="clock-card" id="clockCard" hidden><div class="track" role="progressbar" aria-label="실전모드 남은 시간" aria-valuemin="0" aria-valuemax="60" aria-valuenow="60" id="clockTrack"><div class="fill" id="barFill"></div></div><span class="clock-number"><span id="timeNum">60</span><small>초</small></span></div>
+  <div class="card ready" id="ready" hidden><div class="ready-icon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="15" y="3" width="10" height="4" rx="2" fill="#d8b18c" stroke="none"/><path d="M20 7v4M30 10l3-3"/><circle cx="20" cy="23" r="13" fill="#fff9f0"/><path d="M20 15v9l5 3" stroke="#bc7a5c" stroke-width="3"/></svg></div><h1 tabindex="-1" id="readyTitle">60초, 준비됐나요?</h1><p>2~9단 문제가 골고루 나와요.<br>정답을 확인하면 다음 문제로 넘어가요.<br>틀려도 괜찮아요. 끝까지 도전해요!</p><button class="btn" id="startBtn">시작할게요!</button><small>시작 버튼을 눌러야 시간이 흘러요.</small></div>
+  <div id="exercise" hidden>
+   <div class="card question-card"><p class="question-label" id="questionLabel">답을 넣고 확인을 눌러요</p><div class="question" id="question" tabindex="-1" role="group" aria-label="곱셈 문제"><span id="factorA">2</span><span class="op" aria-hidden="true">×</span><span id="factorB">3</span><span class="op" aria-hidden="true">=</span></div><output class="answer empty" id="answerBox" aria-label="내가 입력한 답" aria-live="polite">?</output><p class="feedback" id="feedback" role="status" aria-live="polite"></p></div>
+   <div class="keypad" id="keypad" role="group" aria-label="답 입력 키패드"></div>
+   <p class="keyboard-note">키보드 숫자 · 지우기 Backspace · 확인 Enter</p>
+  </div>
+ </div>
+</section>
+<section id="result" class="screen" aria-labelledby="resultTitle">
+ <div class="result-container">
+  <div class="card result-card"><div class="result-icon" id="resultIcon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m20 4 4.8 9.8 10.8 1.6-7.8 7.6 1.8 10.8-9.6-5.1-9.6 5.1 1.8-10.8-7.8-7.6 10.8-1.6Z" fill="#f3d881" stroke="#b6a06b"/><path d="M16 20h.1m7.8 0h.1" stroke="#766344" stroke-width="3"/><path d="M17 24q3 3 6 0" stroke="#766344"/></svg></div><h1 id="resultTitle" tabindex="-1">오늘도 멋지게 해냈어요!</h1><p class="result-sub" id="resultSub"></p><div class="stats"><div class="stat"><b id="rCorrect">0</b><span>맞힌 문제</span></div><div class="stat"><b id="rTotal">0</b><span>도전한 문제</span></div><div class="stat"><b id="rAccuracy">0%</b><span>정확도</span></div></div><p class="new-record" id="newRecord" hidden></p><div class="wrong-area" id="wrongArea" hidden><h2>한 번 더 만나면 쉬워져요 <svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 34V21" stroke="#6b927c"/><path d="M20 27C8 28 5 19 7 14c9 0 14 5 13 13Z" fill="#b9d5bd" stroke="#6b927c"/><path d="M20 23c-1-12 8-17 14-15 1 9-5 16-14 15Z" fill="#d8e9cd" stroke="#6b927c"/></svg></h2><div class="chips" id="wrongList"></div><button class="btn small secondary" id="reviewBtn">이 문제들 다시 연습하기</button></div></div>
+  <div class="card register-panel" id="registerPanel" hidden><h2><svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8H6v6c0 6 5 8 9 8m13-14h6v6c0 6-5 8-9 8"/><path d="M11 5h18v11c0 7-4 11-9 11s-9-4-9-11Z" fill="#f4d580"/><path d="M20 27v7m-7 2h14"/></svg> 내 기록도 올려 볼까요?</h2><p>실명 대신 별명을 골라요. 별명과 점수는 모두에게 보여요.</p><div class="select-row"><label>꾸밈말<select id="lbAdj"></select></label><label>동물 친구<select id="lbAnimal"></select></label></div><button class="btn full" id="lbSubmit">순위표에 기록 올리기</button><p class="status" id="submitStatus" role="status"></p></div>
+  <div class="row result-actions"><button class="btn" id="againBtn">↻ 다시 하기</button><button class="btn secondary" id="homeBtn">처음으로</button></div>
+ </div>
+</section>
+<section id="board" class="screen" aria-labelledby="boardTitle">
+ <div class="board-container"><div class="board-heading"><h1 id="boardTitle" tabindex="-1"><svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8H6v6c0 6 5 8 9 8m13-14h6v6c0 6-5 8-9 8"/><path d="M11 5h18v11c0 7-4 11-9 11s-9-4-9-11Z" fill="#f4d580"/><path d="M20 27v7m-7 2h14"/></svg> 실전모드 순위표</h1><p>60초 동안 맞힌 문제 · TOP 10</p></div><div class="board-meta"><span class="live-badge">우리들의 도전 기록</span><span>같은 점수는 같은 순위예요</span></div><div class="empty-state" id="boardState" role="status"><span class="big-icon" aria-hidden="true"><svg class="svg-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 34V21" stroke="#6b927c"/><path d="M20 27C8 28 5 19 7 14c9 0 14 5 13 13Z" fill="#b9d5bd" stroke="#6b927c"/><path d="M20 23c-1-12 8-17 14-15 1 9-5 16-14 15Z" fill="#d8e9cd" stroke="#6b927c"/></svg></span>순위표를 불러오고 있어요.</div><ol class="leader-list" id="lbList" aria-label="실전모드 상위 10개 기록"></ol><p class="status" id="boardStatus" role="status"></p><div class="row board-actions"><button class="btn" id="lbRefresh">↻ 새로고침</button><button class="btn secondary" id="lbBack">처음으로</button></div><p class="board-tip">별명은 겹칠 수 있어요. 한 사람이 여러 기록을 올릴 수도 있어요.</p></div>
+</section>
+</main>
+<footer class="footer">로그인 없이 가볍게<span class="divider">·</span>연습은 오프라인에서도 가능<br>온라인 순위표는 인터넷 연결이 필요해요.</footer>
+<details class="support"><summary>선생님·보호자 안내 / 연결 도움말</summary><div class="support-body"><p><b>사용 방법</b><br>이 HTML 파일을 브라우저에서 열면 됩니다. 2~9단·랜덤 연습은 시간 제한 없이 풀고, ‘연습 마치기’를 누르면 결과가 나옵니다. 연습에서는 오답에 한 번 더 도전할 수 있고, 다시 맞힌 문제도 맞힌 개수에 포함됩니다. 오답 복습에는 한 번이라도 틀린 문제가 모입니다.</p><p><b>실전모드</b><br>시작 버튼을 누른 뒤 60초 동안 진행됩니다. 정답 확인 시간은 약 1초이며, 한 판의 점수는 최대 60점입니다. 다른 탭으로 이동해도 시간은 흐릅니다. 제한 시간을 끝까지 마치고 1문제 이상 맞힌 기록만 등록할 수 있습니다. 최고 기록은 이 브라우저에만 저장됩니다. 저장 공간을 사용할 수 없으면 최고 기록이 유지되지 않을 수 있습니다.</p><p><b>Firebase 연결</b><br>제공하신 프로젝트 <b>ngtest-74fe3</b>의 설정을 이미 넣었습니다. Analytics·Authentication·Realtime Database는 사용하지 않고, 기본 <b>Cloud Firestore</b>의 <b>leaderboard</b> 컬렉션을 사용합니다. 순위표를 처음 열거나 등록할 때만 Firebase SDK를 불러옵니다. 코드를 추가로 수정할 필요가 없습니다.</p><p><b>불러오기·등록이 안 되나요?</b><br>인터넷 연결과 Firestore 생성 여부, 아래 보안 규칙 게시 여부를 확인해 주세요. Realtime Database의 JSON 규칙과는 다릅니다. 네트워크나 브라우저 정책 때문에 파일로 열었을 때 연결이 막히면, 같은 HTML을 Firebase Hosting 같은 HTTPS 호스팅에 올려 사용하세요. API 키 제한·App Check 강제 적용·프로젝트 사용량 제한도 확인 대상입니다.</p><p><b>공개 서비스 운영 시 주의</b><br>웹용 Firebase 설정은 비밀키가 아닙니다. 이 앱은 로그인 없이 등록하므로, 보안 규칙을 적용해도 점수 조작이나 반복 등록을 완전히 막을 수 없습니다. 공개 대회용 검증 시스템이 아니며, 공개 배포 시 서버 측 검증·요청 제한·App Check 등을 별도로 검토해 주세요. App Check만으로 점수의 진위를 검증할 수는 없습니다. 게임에서는 이름·이메일·Analytics를 수집하지 않지만 Firebase 통신에 따른 정보 처리는 운영자가 확인해야 합니다.</p><details><summary>이 앱과 맞는 Firestore 보안 규칙 보기</summary><pre id="rulesText"></pre><button class="btn small outline" id="copyRules">규칙 복사하기</button><p class="status" id="copyStatus" role="status"></p></details><p>잘못된 기록은 Firebase 콘솔에서 관리자가 삭제할 수 있습니다. 게임 화면에서는 기록 수정·삭제를 제공하지 않습니다.</p></div></details>
+</div>
+<dialog id="quitDialog" aria-labelledby="quitTitle"><h2 id="quitTitle">지금 도전을 마칠까요?</h2><p>중간에 끝내면 순위표에는 올릴 수 없어요.<br>이 창이 떠 있어도 60초 시간은 계속 흘러요.</p><div class="row"><button class="btn secondary" id="keepPlaying">계속 풀기</button><button class="btn light" id="confirmQuit">그만하기</button></div></dialog>
+<noscript><p style="padding:24px;text-align:center">이 놀이터는 JavaScript를 켜야 사용할 수 있어요.</p></noscript>
+<script>
+'use strict';
+(() => {
+const $ = id => document.getElementById(id);
+const ICONS = {"dice": "<svg class=\"svg-icon\" viewBox=\"0 0 40 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"6\" y=\"6\" width=\"28\" height=\"28\" rx=\"8\" fill=\"#f9f5ff\"/><g fill=\"#8b71b6\" stroke=\"none\"><circle cx=\"13\" cy=\"13\" r=\"2.2\"/><circle cx=\"27\" cy=\"13\" r=\"2.2\"/><circle cx=\"20\" cy=\"20\" r=\"2.2\"/><circle cx=\"13\" cy=\"27\" r=\"2.2\"/><circle cx=\"27\" cy=\"27\" r=\"2.2\"/></g></svg>", "clock": "<svg class=\"svg-icon\" viewBox=\"0 0 40 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"15\" y=\"3\" width=\"10\" height=\"4\" rx=\"2\" fill=\"#d8b18c\" stroke=\"none\"/><path d=\"M20 7v4M30 10l3-3\"/><circle cx=\"20\" cy=\"23\" r=\"13\" fill=\"#fff9f0\"/><path d=\"M20 15v9l5 3\" stroke=\"#bc7a5c\" stroke-width=\"3\"/></svg>", "cup": "<svg class=\"svg-icon\" viewBox=\"0 0 40 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 8H6v6c0 6 5 8 9 8m13-14h6v6c0 6-5 8-9 8\"/><path d=\"M11 5h18v11c0 7-4 11-9 11s-9-4-9-11Z\" fill=\"#f4d580\"/><path d=\"M20 27v7m-7 2h14\"/></svg>", "star": "<svg class=\"svg-icon\" viewBox=\"0 0 40 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m20 4 4.8 9.8 10.8 1.6-7.8 7.6 1.8 10.8-9.6-5.1-9.6 5.1 1.8-10.8-7.8-7.6 10.8-1.6Z\" fill=\"#f3d881\" stroke=\"#b6a06b\"/><path d=\"M16 20h.1m7.8 0h.1\" stroke=\"#766344\" stroke-width=\"3\"/><path d=\"M17 24q3 3 6 0\" stroke=\"#766344\"/></svg>", "medal": "<svg class=\"svg-icon\" viewBox=\"0 0 40 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 8 14L28 3M10 3h7l3 6 3-6h7l-6 17h-8Z\" fill=\"#cfdbed\" stroke=\"#8e9fba\"/><circle cx=\"20\" cy=\"26\" r=\"11\" fill=\"#f4d580\" stroke=\"#b6a06b\"/><path d=\"m20 20 1.9 3.8 4.2.6-3.1 3 .7 4.2-3.7-2-3.7 2 .7-4.2-3.1-3 4.2-.6Z\" fill=\"#fff6d3\" stroke=\"none\"/></svg>", "leaf": "<svg class=\"svg-icon\" viewBox=\"0 0 40 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 34V21\" stroke=\"#6b927c\"/><path d=\"M20 27C8 28 5 19 7 14c9 0 14 5 13 13Z\" fill=\"#b9d5bd\" stroke=\"#6b927c\"/><path d=\"M20 23c-1-12 8-17 14-15 1 9-5 16-14 15Z\" fill=\"#d8e9cd\" stroke=\"#6b927c\"/></svg>", "cloud": "<svg class=\"svg-icon\" viewBox=\"0 0 40 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M11 30a8 8 0 0 1-1-16 11 11 0 0 1 21 2 7 7 0 0 1-1 14Z\" fill=\"#e1e8ee\" stroke=\"#8396a5\"/><path d=\"M15 35h10\" stroke=\"#8396a5\"/></svg>"};
+const ADJ = ['용감한','똑똑한','빠른','씩씩한','귀여운','반짝이는','튼튼한','행복한'];
+const ANIMAL = ['토끼','사자','고양이','강아지','판다','펭귄','돌고래','여우'];
+// 제공된 웹 앱 설정. Analytics는 사용하지 않습니다.
+const firebaseConfig = {
+  apiKey: 'AIzaSyCQQvS_uPHd9zr6Zp-hYxugTtMccGhPPGY',
+  authDomain: 'ngtest-74fe3.firebaseapp.com',
+  databaseURL: 'https://ngtest-74fe3-default-rtdb.firebaseio.com',
+  projectId: 'ngtest-74fe3',
+  storageBucket: 'ngtest-74fe3.firebasestorage.app',
+  messagingSenderId: '984673974111',
+  appId: '1:984673974111:web:ea2957d80874b1d57ee8ea',
+  measurementId: 'G-KHFWKSYVTS'
+};
+const RULES = `rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /leaderboard/{id} {
+      allow get: if true;
+      allow list: if request.query.limit <= 20;
+      allow create: if request.resource.data.keys().hasOnly(['adj','animal','score','createdAt'])
+        && request.resource.data.keys().hasAll(['adj','animal','score','createdAt'])
+        && request.resource.data.adj in ['용감한','똑똑한','빠른','씩씩한','귀여운','반짝이는','튼튼한','행복한']
+        && request.resource.data.animal in ['토끼','사자','고양이','강아지','판다','펭귄','돌고래','여우']
+        && request.resource.data.score is int
+        && request.resource.data.score >= 1
+        && request.resource.data.score <= 60
+        && request.resource.data.createdAt == request.time;
+      allow update, delete: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}`;
+$('rulesText').textContent = RULES;
+function savedRead(key, fallback) {try {return localStorage.getItem(key) ?? fallback;} catch {return fallback;}}
+function savedWrite(key, value) {try {localStorage.setItem(key, String(value));} catch { /* 저장이 불가능해도 게임은 계속됩니다. */ }}
+let best = Number(savedRead('gugu.best.v1', '0'));
+if (!Number.isInteger(best) || best < 0 || best > 60) best = 0;
+let myRecordId = savedRead('gugu.lastRecord.v1', '');
+let screen = 'home', S = null, replay = {kind:'random'}, timer = null, transition = null;
+const colors = ['#d9eee3','#f9dce5','#dfedf9','#fae9b8','#e8e0f6','#f9dfce','#dfeede','#e5e6f8'];
+for (let dan=2;dan<=9;dan++) {
+ const button = document.createElement('button');button.className='dan-btn';button.style.setProperty('--tone',colors[dan-2]);button.setAttribute('aria-label',`${dan}단 연습`);
+ button.append(document.createTextNode(`${dan}단`));const small=document.createElement('small');small.textContent='연습하기';button.append(small);button.addEventListener('click',()=>start({kind:'dan',dan}));$('danGrid').append(button);
+}
+for(const [id, list] of [['lbAdj',ADJ],['lbAnimal',ANIMAL]]) {
+ for(const word of list){const option=document.createElement('option');option.value=word;option.textContent=word;$(id).append(option);}
+ const old=savedRead('gugu.'+id,'');if(list.includes(old))$(id).value=old;
+}
+const keys=['1','2','3','4','5','6','7','8','9','delete','0','enter'];
+for(const key of keys){const b=document.createElement('button');b.className='key'+(key==='delete'?' delete':key==='enter'?' enter':'');b.textContent=key==='delete'?'⌫ 지우기':key==='enter'?'확인 ✓':key;b.setAttribute('aria-label',key==='delete'?'마지막 숫자 지우기':key==='enter'?'답 확인':key);b.addEventListener('click',()=>input(key));$('keypad').append(b);}
+function show(id, focusId) {
+ screen=id;document.querySelectorAll('.screen').forEach(el=>el.classList.toggle('active',el.id===id));
+ $('bestText').textContent=`${best}문제`;
+ const help=document.querySelector('.support');if(id!=='home')help.open=false;
+ window.scrollTo({top:0,behavior:'instant'});if(focusId)$(focusId).focus({preventScroll:true});
+}
+function shuffle(array){for(let i=array.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[array[i],array[j]]=[array[j],array[i]];}return array;}
+function freshDeck(options) {
+ if(options.kind==='review')return shuffle(options.problems.map(q=>({...q})));
+ const deck=[];for(let a=2;a<=9;a++){if(options.kind==='dan'&&a!==options.dan)continue;for(let b=1;b<=9;b++)deck.push({a,b});}return shuffle(deck);
+}
+function cleanup(){clearInterval(timer);clearTimeout(transition);timer=null;transition=null;}
+function start(options) {
+ cleanup();replay=options;
+ S={options,real:options.kind==='real',started:false,finished:false,end:0,correct:0,total:0,wrong:new Map(),deck:[],q:null,answer:'',locked:false,registration:null};
+ $('modeLabel').textContent=options.kind==='dan'?`${options.dan}단 연습`:options.kind==='review'?'오답 다시 연습':S.real?'60초 실전':'랜덤 연습';
+ $('quitBtn').textContent=S.real?'← 그만하기':'← 연습 마치기';
+ $('ready').hidden=!S.real;$('exercise').hidden=S.real;$('clockCard').hidden=!S.real;
+ $('registerPanel').hidden=true;$('clockCard').classList.remove('danger');setClock(60);updateScore();
+ if(!S.real){S.started=true;nextQuestion();}
+ show('play',S.real?'startBtn':'question');
+}
+function nextQuestion(){
+ if(!S||S.finished)return;
+ if(expired())return;
+ if(!S.deck.length){S.deck=freshDeck(S.options);if(S.q&&S.deck.length>1&&S.deck[S.deck.length-1].a===S.q.a&&S.deck[S.deck.length-1].b===S.q.b){[S.deck[0],S.deck[S.deck.length-1]]=[S.deck[S.deck.length-1],S.deck[0]];}}
+ S.q={...S.deck.pop(),attempts:0};S.answer='';S.locked=false;
+ $('factorA').textContent=S.q.a;$('factorB').textContent=S.q.b;$('question').setAttribute('aria-label',`${S.q.a} 곱하기 ${S.q.b} 는 얼마일까요?`);
+ $('feedback').textContent='';$('feedback').className='feedback';$('questionLabel').textContent=S.options.kind==='review'?'다시 만나서 반가워요!':'답을 넣고 확인을 눌러요';renderAnswer();enableKeys(true);
+}
+function enableKeys(enabled){$('keypad').querySelectorAll('button').forEach(b=>b.disabled=!enabled);}
+function updateScore(){$('correctText').textContent=S?S.correct:0;$('totalText').textContent=S?S.total:0;}
+function renderAnswer(type=''){$('answerBox').textContent=S.answer||'?';$('answerBox').className='answer'+(!S.answer?' empty':'')+(type?' '+type:'');}
+function input(key){
+ if(screen!=='play'||!S||!S.started||S.finished||S.locked||$('quitDialog').open)return;
+ if(expired())return;
+ if(key==='enter'){submit();return;}
+ if(key==='delete'){S.answer=S.answer.slice(0,-1);renderAnswer();return;}
+ if(!/^\d$/.test(key)||S.answer.length>=2)return;
+ S.answer=S.answer==='0'?key:S.answer+key;renderAnswer();
+}
+function feedback(text,good){$('feedback').textContent=text;$('feedback').className='feedback '+(good?'good':'bad');}
+function submit(){
+ if(!S.answer){feedback('먼저 답을 넣어 주세요.',false);return;}
+ const round=S,q=S.q,answer=q.a*q.b,correct=Number(S.answer)===answer;
+ if(q.attempts===0)S.total++;q.attempts++;
+ if(correct){S.correct++;feedback('정답! 정말 멋져요!',true);renderAnswer('right');}
+ else{
+  S.wrong.set(`${q.a}x${q.b}`,{a:q.a,b:q.b});renderAnswer('wrong');
+  if(!S.real&&q.attempts===1){feedback('괜찮아요! 한 번 더 해 볼까요?',false);updateScore();S.locked=true;enableKeys(false);transition=setTimeout(()=>{if(S!==round||S.finished)return;S.answer='';S.locked=false;renderAnswer();enableKeys(true);},650);return;}
+  feedback(`정답은 ${answer}예요. 다음에 다시 만나요!`,false);
+ }
+ updateScore();S.locked=true;enableKeys(false);
+ // 정답 확인에 최소 1초를 써서 60초 실전 점수가 최대 60이 되게 합니다.
+ transition=setTimeout(()=>{if(S!==round||S.finished)return;nextQuestion();},S.real?1000:(correct?650:1450));
+}
+function setClock(seconds){$('timeNum').textContent=Math.ceil(seconds);$('barFill').style.width=`${Math.max(0,Math.min(100,seconds/60*100))}%`;$('clockTrack').setAttribute('aria-valuenow',Math.ceil(seconds));$('clockCard').classList.toggle('danger',seconds<=10);}
+function expired(){if(S&&S.real&&S.started&&!S.finished&&performance.now()>=S.end){finish(true);return true;}return false;}
+function beginReal(){if(!S||!S.real||S.started)return;S.started=true;S.end=performance.now()+60000;$('ready').hidden=true;$('exercise').hidden=false;nextQuestion();timer=setInterval(()=>{if(!S||S.finished)return;if(expired())return;setClock(Math.max(0,(S.end-performance.now())/1000));},100);$('question').focus({preventScroll:true});}
+function finish(completed=false){
+ if(!S||S.finished)return;
+ const finishedReal=S.real&&S.started&&completed&&performance.now()>=S.end;
+ S.finished=true;cleanup();if($('quitDialog').open)$('quitDialog').close();
+ const total=S.total,correct=S.correct,accuracy=total?Math.round(correct/total*100):0;
+ $('rCorrect').textContent=correct;$('rTotal').textContent=total;$('rAccuracy').textContent=`${accuracy}%`;
+ $('resultIcon').innerHTML=ICONS[finishedReal?'medal':'star'];$('resultTitle').textContent=finishedReal?'60초 도전, 끝까지 해냈어요!':total?'오늘도 멋지게 연습했어요!':'다음에 함께 도전해요!';
+ $('resultSub').textContent=S.real?(finishedReal?'조금씩 도전하면 곱셈 자신감도 쑥쑥!':'중간에 마친 기록은 순위표에 올리지 않아요.'):'다시 도전해서 맞힌 문제도 맞힌 개수에 포함돼요.';
+ $('newRecord').hidden=true;
+ if(finishedReal&&correct>best){best=correct;savedWrite('gugu.best.v1',best);$('newRecord').textContent='이 브라우저의 새로운 최고 기록이에요!';$('newRecord').hidden=false;}
+ else if(finishedReal){$('newRecord').textContent=`이 브라우저의 최고 기록은 ${best}문제예요.`;$('newRecord').hidden=false;}
+ $('wrongList').replaceChildren();$('wrongArea').hidden=!S.wrong.size;
+ for(const q of S.wrong.values()){const chip=document.createElement('span');chip.className='chip';chip.textContent=`${q.a} × ${q.b} = ${q.a*q.b}`;$('wrongList').append(chip);}
+ S.registration=finishedReal&&correct>=1&&correct<=60?{score:correct,id:null,saved:false,busy:false,uncertain:false,name:null}:null;
+ $('registerPanel').hidden=!S.registration;$('lbSubmit').disabled=false;$('lbSubmit').textContent='순위표에 기록 올리기';$('submitStatus').textContent='';$('submitStatus').className='status';
+ $('lbAdj').disabled=false;$('lbAnimal').disabled=false;
+ show('result','resultTitle');
+}
+$('randomBtn').onclick=()=>start({kind:'random'});$('realBtn').onclick=()=>start({kind:'real'});$('startBtn').onclick=beginReal;
+$('quitBtn').onclick=()=>{if(!S||S.finished)return;if(S.real&&S.started){if(expired())return;$('quitDialog').showModal();}else if(S.real){cleanup();show('home','homeTitle');}else finish(false);};
+$('keepPlaying').onclick=()=>$('quitDialog').close();$('confirmQuit').onclick=()=>{if(!expired())finish(false);};
+$('againBtn').onclick=()=>start(replay);$('homeBtn').onclick=()=>show('home','homeTitle');$('lbBack').onclick=()=>show('home','homeTitle');
+$('reviewBtn').onclick=()=>{if(S&&S.wrong.size)start({kind:'review',problems:[...S.wrong.values()]});};
+window.addEventListener('keydown',event=>{
+ if(screen!=='play'||!S||!S.started||S.finished||event.ctrlKey||event.metaKey||event.altKey||$('quitDialog').open)return;
+ if(event.target instanceof HTMLSelectElement)return;
+ if(event.key==='Enter'&&event.target instanceof HTMLButtonElement&&!$('keypad').contains(event.target))return;
+ const key=/^\d$/.test(event.key)?event.key:event.key==='Backspace'||event.key==='Delete'?'delete':event.key==='Enter'?'enter':null;
+ if(key){event.preventDefault();if(!event.repeat)input(key);}
+});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&screen==='play')expired();});
+window.addEventListener('pageshow',()=>{if(screen==='play')expired();});
+// SDK는 필요할 때만 불러오며 게임 본체는 통신에 의존하지 않습니다.
+let firebasePromise=null;
+function timeout(promise,ms=14000){let handle;return Promise.race([promise,new Promise((_,reject)=>{handle=setTimeout(()=>reject(Object.assign(new Error('timeout'),{code:'app/timeout'})),ms);})]).finally(()=>clearTimeout(handle));}
+async function firebase(){
+ if(!navigator.onLine)throw Object.assign(new Error('offline'),{code:'app/offline'});
+ if(!firebasePromise){firebasePromise=(async()=>{
+  const [appSDK,fs]=await timeout(Promise.all([import('https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js'),import('https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js')]));
+  const app=appSDK.initializeApp(firebaseConfig,'gugu-playground');const db=fs.getFirestore(app);return {fs,db};
+ })().catch(error=>{firebasePromise=null;throw error;});}
+ return firebasePromise;
+}
+function errorText(error,write=false){
+ const code=String(error&&error.code||'');
+ if(code.includes('permission-denied')||code.includes('unauthenticated'))return '접근이 허용되지 않았어요. 선생님께 Firestore 보안 규칙 확인을 부탁해 주세요.';
+ if(code.includes('not-found'))return 'Firestore 데이터베이스를 찾지 못했어요. 기본 데이터베이스가 생성됐는지 확인해 주세요.';
+ if(code.includes('resource-exhausted'))return '서버의 사용량 한도에 도달했어요. 잠시 후 다시 시도해 주세요.';
+ if(code.includes('offline')||code.includes('unavailable')||code.includes('timeout'))return write?'등록 결과를 확인하지 못했어요. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.':'인터넷 연결을 확인한 뒤 새로고침을 눌러 주세요.';
+ return '연결하지 못했어요. 인터넷 연결·Firestore 규칙·API 키 제한을 확인해 주세요.';
+}
+let boardRequest=0;
+function boardMessage(text,icon='🌱'){$('boardState').hidden=false;$('boardState').replaceChildren();const span=document.createElement('span');span.className='big-icon';span.innerHTML=ICONS[icon==='☁️'?'cloud':icon==='🏅'?'medal':'leaf'];span.setAttribute('aria-hidden','true');$('boardState').append(span,document.createTextNode(text));}
+async function loadBoard(){
+ const request=++boardRequest;show('board','boardTitle');$('lbList').replaceChildren();$('boardStatus').textContent='';$('lbRefresh').disabled=true;boardMessage('순위표를 불러오고 있어요.');
+ try{
+  const {fs,db}=await firebase();
+  const snapshot=await timeout(fs.getDocsFromServer(fs.query(fs.collection(db,'leaderboard'),fs.orderBy('score','desc'),fs.limit(10))));
+  if(request!==boardRequest||screen!=='board')return;
+  const entries=snapshot.docs.map(doc=>({id:doc.id,...doc.data()})).filter(x=>ADJ.includes(x.adj)&&ANIMAL.includes(x.animal)&&Number.isInteger(x.score)&&x.score>=1&&x.score<=60);
+  if(!entries.length){boardMessage('아직 기록이 없어요. 첫 도전의 주인공이 되어 볼까요?','🏅');return;}
+  $('boardState').hidden=true;let prev=null,rank=0;
+  entries.forEach((entry,index)=>{
+   if(entry.score!==prev){rank=index+1;prev=entry.score;}
+   const item=document.createElement('li');item.className='leader-item'+(entry.id===myRecordId?' me':'');
+   const r=document.createElement('span');r.className='rank';r.textContent=String(rank);if(rank<=3)r.classList.add('podium','podium-'+rank);r.setAttribute('aria-label',`${rank}위`);
+   const name=document.createElement('span');name.className='nickname';name.textContent=`${entry.adj} ${entry.animal}`;
+   if(entry.id===myRecordId){const badge=document.createElement('small');badge.className='my-badge';badge.textContent='내가 방금 올린 기록';name.append(badge);}
+   const points=document.createElement('span');points.className='points';points.textContent=entry.score+' ';const unit=document.createElement('small');unit.textContent='문제';points.append(unit);item.append(r,name,points);$('lbList').append(item);
+  });
+  $('boardStatus').textContent=myRecordId&&!entries.some(x=>x.id===myRecordId)?'내 기록이 상위 10개 안에 없으면 이 순위표에는 보이지 않아요.':'';
+ }catch(error){if(request===boardRequest&&screen==='board')boardMessage(errorText(error),'☁️');}
+ finally{if(request===boardRequest)$('lbRefresh').disabled=false;}
+}
+$('lbBtn').onclick=loadBoard;$('lbRefresh').onclick=loadBoard;
+function markSaved(reg){reg.saved=true;reg.uncertain=false;myRecordId=reg.id;savedWrite('gugu.lastRecord.v1',reg.id);if(S&&S.registration===reg){$('lbSubmit').disabled=true;$('lbSubmit').textContent='등록 완료 ✓';$('submitStatus').className='status';$('submitStatus').textContent='기록을 올렸어요! 순위표에서 확인해 보세요.';}}
+async function register(){
+ const reg=S&&S.registration;if(!reg||reg.saved||reg.busy)return;
+ reg.busy=true;$('lbSubmit').disabled=true;$('submitStatus').className='status';$('submitStatus').textContent='내 기록을 올리고 있어요…';
+ const same=()=>S&&S.registration===reg;
+ try{
+  const {fs,db}=await firebase();
+  if(!reg.id){reg.id=fs.doc(fs.collection(db,'leaderboard')).id;reg.name={adj:$('lbAdj').value,animal:$('lbAnimal').value};savedWrite('gugu.lbAdj',reg.name.adj);savedWrite('gugu.lbAnimal',reg.name.animal);}
+  if(same()){$('lbAdj').disabled=true;$('lbAnimal').disabled=true;}
+  const ref=fs.doc(db,'leaderboard',reg.id);
+  // 통신 결과가 불명확하면 같은 문서를 확인해 중복 등록을 방지합니다.
+  if(reg.uncertain){const existing=await timeout(fs.getDocFromServer(ref));if(existing.exists()){markSaved(reg);if(same()&&screen==='result')loadBoard();return;}}
+  reg.uncertain=true;
+  await timeout(fs.setDoc(ref,{...reg.name,score:reg.score,createdAt:fs.serverTimestamp()}));
+  markSaved(reg);if(same()&&screen==='result')loadBoard();
+ }catch(error){
+  if(same()){$('submitStatus').className='status error';$('submitStatus').textContent=errorText(error,true)+' 결과가 불확실하면 다시 누를 때 같은 기록을 확인하므로 중복 등록을 줄입니다.';$('lbSubmit').disabled=false;$('lbSubmit').textContent='연결 확인 후 다시 시도';}
+ }finally{reg.busy=false;}
+}
+$('lbSubmit').onclick=register;
+$('copyRules').onclick=async()=>{try{await navigator.clipboard.writeText(RULES);$('copyStatus').textContent='규칙을 복사했어요. Firestore의 규칙 탭에 붙여넣고 게시해 주세요.';}catch{$('copyStatus').textContent='자동 복사를 사용할 수 없어요. 위 규칙을 직접 선택해서 복사해 주세요.';}};
+show('home');
+})();
+</script>
+</body>
+</html>
